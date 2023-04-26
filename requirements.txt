@@ -1,5 +1,5 @@
-Cython==0.29.21
-librosa==0.8.0
+Cython
+librosa
 matplotlib
 numpy
 scipy
@@ -7,11 +7,11 @@ torch
 torchvision
 unidecode
 
-jamo==0.4.1
-pypinyin==0.44.0
-jieba==0.42.1
-protobuf==3.19.0
-cn2an==0.5.17
+jamo
+pypinyin
+jieba
+protobuf
+cn2an
 inflect==6.0.0
 eng_to_ipa==0.0.2
 ko_pron==1.3
