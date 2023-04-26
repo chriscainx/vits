@@ -3,9 +3,8 @@ librosa==0.8.0
 matplotlib
 numpy
 scipy
-tensorboard
-torch
-torchvision
+torch==1.6.0
+torchvision==0.7.0
 unidecode
 
 jamo==0.4.1
