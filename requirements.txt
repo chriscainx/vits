@@ -6,7 +6,6 @@ scipy
 torch
 torchvision
 unidecode
-tensorrt
 jamo
 pypinyin
 jieba
