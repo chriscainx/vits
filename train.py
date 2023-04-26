@@ -214,10 +214,7 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
             "all/mel": utils.plot_spectrogram_to_numpy(mel[0].data.cpu().numpy()),
             "all/attn": utils.plot_alignment_to_numpy(attn[0,0].data.cpu().numpy())
         }
-        utils.summarize(
-          global_step=global_step, 
-          images=image_dict,
-          scalars=scalar_dict)
+        
 
       if global_step % hps.train.eval_interval == 0:
         evaluate(hps, net_g, eval_loader)
@@ -281,12 +278,7 @@ def evaluate(hps, generator, eval_loader):
       image_dict.update({"gt/mel": utils.plot_spectrogram_to_numpy(mel[0].cpu().numpy())})
       audio_dict.update({"gt/audio": y[0,:,:y_lengths[0]]})
 
-    utils.summarize(
-      global_step=global_step, 
-      images=image_dict,
-      audios=audio_dict,
-      audio_sampling_rate=hps.data.sampling_rate
-    )
+    
     generator.train()
 
                            
